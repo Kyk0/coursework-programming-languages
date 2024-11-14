@@ -1,26 +1,12 @@
 import random
 
-def first_digit(num):
-    return int(str(num)[0])
+array = [random.randint(-10, 10) for _ in range(20)]
+min_value = int(input("Enter the minimum value of the range: "))
+max_value = int(input("Enter the maximum value of the range: "))
 
-def partition(arr, low, high):
-    pivot = arr[high]
-    i = low - 1
-    for j in range(low, high):
-        if first_digit(arr[j]) < first_digit(pivot):
-            i += 1
-            arr[i], arr[j] = arr[j], arr[i]
-    arr[i + 1], arr[high] = arr[high], arr[i + 1]
-    return i + 1
+indices = [i for i, value in enumerate(array) if min_value <= value <= max_value]
 
-def quick_sort(arr, low, high):
-    if low < high:
-        pi = partition(arr, low, high)
-        quick_sort(arr, low, pi - 1)
-        quick_sort(arr, pi + 1, high)
-
-
-arr = [random.randint(1, 10) for _ in range(10)]
-print("Original array:", arr)
-quick_sort(arr, 0, len(arr) - 1)
-print("Sorted array:", arr)
+print("Array:", array)
+print("Range:", f"[{min_value}; {max_value}]")
+print("Count:", len(indices))
+print("Indices:", indices)

@@ -1,7 +1,12 @@
-import random
+lst = [4, 5, 2, 3, 4]
+minimum = min(lst)
+maximum = max(lst)
+total = sum(lst)
+average = total / len(lst)
+second_minimum = min(x for x in lst if x != minimum)
 
-arr = [random.randint(0, 4)for _ in range(10)]
-x = int(input("Enter the value of X: "))
-
-print("Array:", arr)
-print("Indices:", [i for i in range(len(arr)) if arr[i] == x])
+print("Minimum:", minimum)
+print("Maximum:", maximum)
+print("Sum:", total)
+print("Average:", average)
+print("Second minimum:", second_minimum)
