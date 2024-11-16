@@ -10,7 +10,7 @@ def stone_sort(arr):
         arr[i], arr[max_index] = arr[max_index], arr[i]
     return arr
 
-array = [random.randint(1, 100) for _ in range(10)]
+array = [random.randint(0, 100) for _ in range(10)]
 print("Original array:", array)
 stone_sort(array)
 print("Sorted array:", array)

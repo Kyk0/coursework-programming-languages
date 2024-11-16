@@ -20,7 +20,7 @@ def quick_sort(arr, low, high):
         quick_sort(arr, pi + 1, high)
 
 
-arr = [random.randint(1, 10) for _ in range(10)]
+arr = [random.randint(0, 10) for _ in range(10)]
 print("Original array:", arr)
 quick_sort(arr, 0, len(arr) - 1)
 print("Sorted array:", arr)
