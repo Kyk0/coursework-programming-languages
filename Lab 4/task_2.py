@@ -1,2 +1,2 @@
-numbers = list(range(-10, 11, 2))
-print(numbers)
+list_of_fives = [5 for _ in range(20)]
+print(list_of_fives)
